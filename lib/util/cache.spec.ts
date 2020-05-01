@@ -7,5 +7,6 @@ describe('getRepoCache', () => {
   });
   it('clears repo cache', () => {
     clearRepoCache();
+    expect(getRepoCached('key')).toBeUndefined();
   });
 });

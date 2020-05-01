@@ -1,6 +1,7 @@
 // TODO fix mocks
 /* eslint-disable jest/expect-expect */
-import * as _hostRules from '../../util/host-rules';
+import { GotResponse, Platform } from '..';
+import { partial } from '../../../test/util';
 import {
   REPOSITORY_ARCHIVED,
   REPOSITORY_CHANGED,
@@ -13,8 +14,7 @@ import {
   PR_STATE_OPEN,
 } from '../../constants/pull-requests';
 import { BranchStatus } from '../../types';
-import { GotResponse, Platform } from '..';
-import { partial } from '../../../test/util';
+import * as _hostRules from '../../util/host-rules';
 
 describe('platform/gitlab', () => {
   let gitlab: Platform;

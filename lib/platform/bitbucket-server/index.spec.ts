@@ -1,8 +1,5 @@
 // TODO fix mocks
 /* eslint-disable jest/expect-expect */
-import responses from './__fixtures__/responses';
-import { GotApi, RepoParams, Platform } from '../common';
-import { Storage } from '../git/storage';
 import {
   REPOSITORY_CHANGED,
   REPOSITORY_DISABLED,
@@ -10,6 +7,9 @@ import {
 } from '../../constants/error-messages';
 import { PR_STATE_CLOSED, PR_STATE_OPEN } from '../../constants/pull-requests';
 import { BranchStatus } from '../../types';
+import { GotApi, Platform, RepoParams } from '../common';
+import { Storage } from '../git/storage';
+import responses from './__fixtures__/responses';
 
 describe('platform/bitbucket-server', () => {
   Object.entries(responses).forEach(([scenarioName, mockResponses]) => {

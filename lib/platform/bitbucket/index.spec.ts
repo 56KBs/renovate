@@ -2,11 +2,11 @@
 /* eslint-disable jest/expect-expect */
 import URL from 'url';
 import 'jest-extended';
-import responses from './__fixtures__/responses';
-import { GotApi, RepoParams, Platform } from '../common';
 import { REPOSITORY_DISABLED } from '../../constants/error-messages';
-import { BranchStatus } from '../../types';
 import { logger as _logger } from '../../logger';
+import { BranchStatus } from '../../types';
+import { GotApi, Platform, RepoParams } from '../common';
+import responses from './__fixtures__/responses';
 
 describe('platform/bitbucket', () => {
   let bitbucket: Platform;
